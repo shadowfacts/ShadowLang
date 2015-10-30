@@ -1,5 +1,7 @@
 package net.shadowfacts.shadowlang.model;
 
+import net.shadowfacts.shadowlang.util.AccessList;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,15 +43,10 @@ public class Class {
 	/**
 	 * The access the constructor has
 	 */
-	public List<Access> constructorAccess;
+	public AccessList constructorAccess;
 
-	/**
-	 * @param data The data,
-	 *				starting with `class Whatever (has Something): {`,
-	 * 				ending with `}`
-	 */
-	public Class(String data) {
-		// TODO: Parse data
+	public boolean hasStaticField() {
+		return fields.stream().filter(f -> f.access.isStatic()).findAny().isPresent();
 	}
 
 }

@@ -1,4 +1,4 @@
-package net.shadowfacts.shadowlang.parser;
+package net.shadowfacts.shadowlang.util;
 
 /**
  * @author shadowfacts

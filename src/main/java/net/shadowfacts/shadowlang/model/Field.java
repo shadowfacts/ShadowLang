@@ -1,5 +1,7 @@
 package net.shadowfacts.shadowlang.model;
 
+import net.shadowfacts.shadowlang.util.AccessList;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,12 +17,12 @@ public class Field {
 
 	public String desc;
 
-	public List<Access> access = Arrays.asList(Access.PUBLIC);
+	public AccessList access;
 
 	public Object deafultValue;
 
-	public Field(String data) {
-		// TODO: Parse data
+	public Field() {
+		access.add(Access.PUBLIC);
 	}
 
 }

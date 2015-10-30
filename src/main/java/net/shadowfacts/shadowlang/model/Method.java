@@ -1,7 +1,9 @@
 package net.shadowfacts.shadowlang.model;
 
+import net.shadowfacts.shadowlang.util.AccessList;
+import org.objectweb.asm.tree.InsnList;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -11,10 +13,16 @@ public class Method {
 
 	public List<Annotation> annotations = new ArrayList<>();
 
-	public List<Access> access = Arrays.asList(Access.PUBLIC);
+	public AccessList access = new AccessList();
 
-	public Method(String data) {
-		// TODO: Parse data
+	public InsnList instructions = new InsnList();
+
+	public String name;
+
+	public String desc;
+
+	public Method() {
+		access.add(Access.PUBLIC);
 	}
 
 }
