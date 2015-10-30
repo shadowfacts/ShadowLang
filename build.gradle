@@ -1,0 +1,14 @@
+apply plugin: "java"
+apply plugin: "idea"
+
+repositories {
+	mavenCentral()
+	maven {
+		url "http://mvn.rx14.co.uk/shadowfacts/"
+	}
+}
+
+dependencies {
+	compile group: "net.shadowfacts", name: "ShadowLib", version: "1.4.0-build-21"
+	compile group: "org.ow2.asm", name: "asm", version: "5.0.4"
+}

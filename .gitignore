@@ -1,0 +1,17 @@
+# java
+*.class
+
+# gradle
+/build
+/.gradle
+
+# idea
+/out
+/.idea
+/run
+*.iml
+*.ipr
+*.iws
+
+# OS X Shit
+.DS_Store
